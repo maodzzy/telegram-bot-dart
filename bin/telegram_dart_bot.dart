@@ -7,9 +7,11 @@ import 'dart:io' as io;
 import 'package:dart_dotenv/dart_dotenv.dart';
 
 Future<void> main() async {
-  final dotEnv = DotEnv(filePath: '.env');
   final TeleDart teledart;
-  final telegramApiKey = dotEnv.get("API_KEY");
+  final dotEnv = DotEnv(filePath: '.env');
+  final telegramApiKey = dotEnv.getDotEnv()['API_KEY'];
+  print(telegramApiKey.toString());
+
   // init Telegram
   if (telegramApiKey != null) {
     final telegram = Telegram(telegramApiKey);
