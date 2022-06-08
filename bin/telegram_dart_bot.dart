@@ -9,7 +9,7 @@ import 'package:dart_dotenv/dart_dotenv.dart';
 Future<void> main() async {
   final TeleDart teledart;
   final dotEnv = DotEnv(filePath: '.env');
-  final telegramApiKey = dotEnv.getDotEnv()['API_KEY'];
+  final telegramApiKey = dotEnv.getDotEnv()['APIKEY'];
   print(telegramApiKey.toString());
 
   // init Telegram
