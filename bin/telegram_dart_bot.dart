@@ -7,19 +7,16 @@ import 'dart:io' as io;
 import 'package:dart_dotenv/dart_dotenv.dart';
 
 Future<void> main() async {
-  final TeleDart teledart;
-  final dotEnv = DotEnv(filePath: '.env');
-  final telegramApiKey = dotEnv.getDotEnv()['APIKEY'];
-  print(telegramApiKey.toString());
-
+  
+  
+  final telegramApiKey = '5337535821:AAHdHyc43oJk8K5MK4kQu71M9NfpG0M-nW4';
+  
   // init Telegram
-  if (telegramApiKey != null) {
+  
     final telegram = Telegram(telegramApiKey);
     final event = Event((await telegram.getMe()).username!);
-    teledart = TeleDart(telegram.toString(), event);
-  } else {
-    throw 'API KEY in .env file is empty';
-  }
+    final teledart = TeleDart(telegram.toString(), event);
+ 
 
   // start bot
   teledart.start();
