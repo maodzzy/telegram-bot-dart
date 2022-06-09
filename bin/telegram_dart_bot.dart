@@ -9,7 +9,7 @@ import 'package:dart_dotenv/dart_dotenv.dart';
 Future<void> main() async {
   
   
-  final telegramApiKey = '5337535821:AAHdHyc43oJk8K5MK4kQu71M9NfpG0M-nW4';
+  final telegramApiKey = '5337535821:AAHdHyc43oJk8K5MNfpG0M-nW4';
   
   // init Telegram
   
